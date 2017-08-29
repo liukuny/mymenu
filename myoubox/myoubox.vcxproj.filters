@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="LKComponent">
+      <UniqueIdentifier>{29db69f9-e45c-4d4a-a4ae-7e09c3b85519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LKComponent\源文件">
+      <UniqueIdentifier>{3f1bfbe4-6a0f-45c6-a659-140acf37c160}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LKComponent\头文件">
+      <UniqueIdentifier>{88d95bc8-cdee-4bf9-ab49-31621bed2556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{2e4efd2a-1d8a-4d94-b601-24683112c3f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\头文件">
+      <UniqueIdentifier>{a78d4e26-009b-490c-ac55-09db620e4598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\源文件">
+      <UniqueIdentifier>{1e2a6f0b-112d-4c7b-8967-efa8ca94154e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{3f82eb64-b892-4019-a77f-9e1b6c77c2e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myoubox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myouboxDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\GDICommon.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBtnListBox.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKButtonEx.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrl.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrlEx.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKConst.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKContainer.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBase.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBaseEx.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKDialog.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKEdit.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKFontMgr.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKHintDialogBase.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImage.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImageMgr.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImageWnd.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMainDialog.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMaskDialog.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMenu.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMessageBox.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKProgressbar.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKScrollbar.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKSlidDialog.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKSlidWindow.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKStatic.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKTreeCtrl.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKButton.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBalloonWnd.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\res\resource1.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\ConfigFile.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\configfileconst.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\datatypedef.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\datetime.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\gclass.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\gconst.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\gfunction.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\Json.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\log.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\CommonStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\LocalProtocol.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\CenterInterface.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\CommInterface.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\netbase.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\UdpServer.h">
+      <Filter>Module\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalDataInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeSkinDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKTab.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogEx.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.h">
+      <Filter>LKComponent\头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayMainMenu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myouboxConst.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKPictureEx.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKPicture.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKDynDlgMgr.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKToolTipCtrl.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="myoubox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myouboxDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKBtnListBox.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKButtonEx.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrl.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrlEx.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKContainer.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBase.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBaseEx.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKDialog.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKEdit.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKFontMgr.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKHintDialogBase.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImageMgr.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImageWnd.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMainDialog.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMaskDialog.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMenu.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMessageBox.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKProgressbar.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKScrollbar.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKSlidDialog.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKSlidWindow.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKStatic.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKTreeCtrl.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKButton.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKBalloonWnd.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\ConfigFile.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\datetime.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\gfunction.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\Json.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\log.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\CenterInterface.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\CommInterface.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\netbase.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\UdpServer.cpp">
+      <Filter>Module\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalDataInfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeSkinDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKTab.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\DynDialogEx.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TrayMainMenu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImage.cpp">
+      <Filter>LKComponent\源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKPictureEx.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKPicture.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKDynDlgMgr.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKToolTipCtrl.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="myoubox.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="..\..\..\..\common\res\interfacecommon.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\myoubox.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\myoubox.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="png\button\焦点框.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_close.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_max.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_min.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_restore.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_self.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\Button4-22.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\Button2-20.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\Button3-20.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\dialog\窗体框架.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\edit\输入框24.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\edit\输入框26.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\多选.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\通用框背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\listctrl\表格背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\6像索顶部蒙板.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\27像素底部蒙板.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\选中高亮2-21.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\皮肤.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\消息.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\tab\左导航Button.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\业务.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\treectrl\竖型分组1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\treectrl\竖型分组2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\消息通知.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\增加.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\修改密码.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\combobox\下拉框按钮.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\combobox\下拉框按钮26.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\删除2-16.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\水平滚动条.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\滚动条10.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\滚动条.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\水平滚动条10.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\单选.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\删除2-15.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\软键盘.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\信息.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\计算器.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\火车.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\帮助.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\网络设置.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\提醒1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\广而告知.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\头像外框.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\皮肤按钮.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\按钮删除.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\出错图片.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\tab\多页面.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\23像索顶部蒙板.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\消息提示.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\菜单背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\设置.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\锁定.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\资料同步.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\退出.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\系统升级.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\钱.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\软件小.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\标签背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\主面板.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\解锁.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\锁定图标.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\天气预报.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\上下导航.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\搜索.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\打印机.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\团态.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\总审.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\部审.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\财审.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\小窗口.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\旅行社.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\word.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\客人名单.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\TS\预览.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\Calendar\Button16.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\Calendar\sanchu.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\Calendar\xiaolao.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\Calendar\日历背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\Calendar\左右标.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\新建.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\fax.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\Save.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\SaveAs.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\左开.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\右关.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\右开.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\左关.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\左.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\右.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\登录背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\小关闭.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\common\进度条.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\png\button\焦点框.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\jpg\dlg_bg.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\common\res\jpg\ts\广告.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\头部背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\头部标签.PNG">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\line.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\EditButton.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\边框.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\G03.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

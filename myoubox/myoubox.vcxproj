@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC83D535-3DFD-4A05-BCF3-7FF1AC0F6BC3}</ProjectGuid>
+    <RootNamespace>myoubox</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\Module;..\..\common;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\Module;..\..\common;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>version.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>version.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\GDICommon.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBalloonWnd.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBtnListBox.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKButton.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKButtonEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrl.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrlEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKConst.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKContainer.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBase.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBaseEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKDialog.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKDynDlgMgr.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKEdit.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKFontMgr.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKHintDialogBase.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImage.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImageMgr.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKImageWnd.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMainDialog.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMaskDialog.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMenu.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKMessageBox.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKPicture.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKPictureEx.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKProgressbar.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKScrollbar.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKSlidDialog.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKSlidWindow.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKStatic.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKTab.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKToolTipCtrl.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKTreeCtrl.h" />
+    <ClInclude Include="..\..\..\..\common\res\resource1.h" />
+    <ClInclude Include="..\..\common\CommonStruct.h" />
+    <ClInclude Include="..\..\common\LocalProtocol.h" />
+    <ClInclude Include="..\Module\CenterInterface.h" />
+    <ClInclude Include="..\Module\CommInterface.h" />
+    <ClInclude Include="..\Module\ConfigFile.h" />
+    <ClInclude Include="..\Module\configfileconst.h" />
+    <ClInclude Include="..\Module\datatypedef.h" />
+    <ClInclude Include="..\Module\datetime.h" />
+    <ClInclude Include="..\Module\gclass.h" />
+    <ClInclude Include="..\Module\gconst.h" />
+    <ClInclude Include="..\Module\gfunction.h" />
+    <ClInclude Include="..\Module\Json.h" />
+    <ClInclude Include="..\Module\log.h" />
+    <ClInclude Include="..\Module\netbase.h" />
+    <ClInclude Include="..\Module\UdpServer.h" />
+    <ClInclude Include="ChangeSkinDlg.h" />
+    <ClInclude Include="LocalDataInfo.h" />
+    <ClInclude Include="myoubox.h" />
+    <ClInclude Include="myouboxConst.h" />
+    <ClInclude Include="myouboxDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TrayMainMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\DynDialogEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKBalloonWnd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKBtnListBox.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKButton.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKButtonEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCommonCtrlEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKContainer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKCtrlBaseEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKDynDlgMgr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKEdit.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKFontMgr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKHintDialogBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImage.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImageMgr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKImageWnd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMainDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMaskDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMenu.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKMessageBox.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKPicture.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKPictureEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKProgressbar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKScrollbar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKSlidDialog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKSlidWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKStatic.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKTab.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKToolTipCtrl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKTreeCtrl.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\CenterInterface.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\CommInterface.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\ConfigFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\datetime.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\gfunction.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\Json.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\log.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\netbase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Module\UdpServer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ChangeSkinDlg.cpp" />
+    <ClCompile Include="LocalDataInfo.cpp" />
+    <ClCompile Include="myoubox.cpp" />
+    <ClCompile Include="myouboxDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TrayMainMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\..\common\res\interfacecommon.rc" />
+    <ResourceCompile Include="myoubox.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\myoubox.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\common\res\jpg\dlg_bg.jpg" />
+    <Image Include="..\..\..\..\common\res\jpg\ts\广告.jpg" />
+    <Image Include="..\..\..\..\common\res\png\button\Button2-20.png" />
+    <Image Include="..\..\..\..\common\res\png\button\Button3-20.png" />
+    <Image Include="..\..\..\..\common\res\png\button\Button4-22.png" />
+    <Image Include="..\..\..\..\common\res\png\button\信息.png" />
+    <Image Include="..\..\..\..\common\res\png\button\单选.png" />
+    <Image Include="..\..\..\..\common\res\png\button\多选.png" />
+    <Image Include="..\..\..\..\common\res\png\button\火车.png" />
+    <Image Include="..\..\..\..\common\res\png\button\焦点框.png" />
+    <Image Include="..\..\..\..\common\res\png\button\计算器.png" />
+    <Image Include="..\..\..\..\common\res\png\button\软键盘.png" />
+    <Image Include="..\..\..\..\common\res\png\Calendar\Button16.png" />
+    <Image Include="..\..\..\..\common\res\png\Calendar\sanchu.png" />
+    <Image Include="..\..\..\..\common\res\png\Calendar\xiaolao.png" />
+    <Image Include="..\..\..\..\common\res\png\Calendar\左右标.png" />
+    <Image Include="..\..\..\..\common\res\png\Calendar\日历背景.png" />
+    <Image Include="..\..\..\..\common\res\png\combobox\下拉框按钮.png" />
+    <Image Include="..\..\..\..\common\res\png\combobox\下拉框按钮26.png" />
+    <Image Include="..\..\..\..\common\res\png\common\23像索顶部蒙板.png" />
+    <Image Include="..\..\..\..\common\res\png\common\27像素底部蒙板.png" />
+    <Image Include="..\..\..\..\common\res\png\common\6像索顶部蒙板.png" />
+    <Image Include="..\..\..\..\common\res\png\common\fax.png" />
+    <Image Include="..\..\..\..\common\res\png\common\Save.png" />
+    <Image Include="..\..\..\..\common\res\png\common\SaveAs.png" />
+    <Image Include="..\..\..\..\common\res\png\common\上下导航.png" />
+    <Image Include="..\..\..\..\common\res\png\common\业务.png" />
+    <Image Include="..\..\..\..\common\res\png\common\主面板.png" />
+    <Image Include="..\..\..\..\common\res\png\common\修改密码.png" />
+    <Image Include="..\..\..\..\common\res\png\common\出错图片.png" />
+    <Image Include="..\..\..\..\common\res\png\common\删除2-15.png" />
+    <Image Include="..\..\..\..\common\res\png\common\删除2-16.png" />
+    <Image Include="..\..\..\..\common\res\png\common\右.png" />
+    <Image Include="..\..\..\..\common\res\png\common\右关.png" />
+    <Image Include="..\..\..\..\common\res\png\common\右开.png" />
+    <Image Include="..\..\..\..\common\res\png\common\团态.png" />
+    <Image Include="..\..\..\..\common\res\png\common\增加.png" />
+    <Image Include="..\..\..\..\common\res\png\common\天气预报.png" />
+    <Image Include="..\..\..\..\common\res\png\common\头像外框.png" />
+    <Image Include="..\..\..\..\common\res\png\common\小关闭.png" />
+    <Image Include="..\..\..\..\common\res\png\common\小窗口.png" />
+    <Image Include="..\..\..\..\common\res\png\common\左.png" />
+    <Image Include="..\..\..\..\common\res\png\common\左关.png" />
+    <Image Include="..\..\..\..\common\res\png\common\左开.png" />
+    <Image Include="..\..\..\..\common\res\png\common\广而告知.png" />
+    <Image Include="..\..\..\..\common\res\png\common\总审.png" />
+    <Image Include="..\..\..\..\common\res\png\common\打印机.png" />
+    <Image Include="..\..\..\..\common\res\png\common\按钮删除.png" />
+    <Image Include="..\..\..\..\common\res\png\common\提醒1.png" />
+    <Image Include="..\..\..\..\common\res\png\common\搜索.png" />
+    <Image Include="..\..\..\..\common\res\png\common\新建.png" />
+    <Image Include="..\..\..\..\common\res\png\common\标签背景.png" />
+    <Image Include="..\..\..\..\common\res\png\common\水平滚动条.png" />
+    <Image Include="..\..\..\..\common\res\png\common\水平滚动条10.png" />
+    <Image Include="..\..\..\..\common\res\png\common\消息.png" />
+    <Image Include="..\..\..\..\common\res\png\common\消息提示.png" />
+    <Image Include="..\..\..\..\common\res\png\common\消息通知.png" />
+    <Image Include="..\..\..\..\common\res\png\common\滚动条.png" />
+    <Image Include="..\..\..\..\common\res\png\common\滚动条10.png" />
+    <Image Include="..\..\..\..\common\res\png\common\皮肤.png" />
+    <Image Include="..\..\..\..\common\res\png\common\皮肤按钮.png" />
+    <Image Include="..\..\..\..\common\res\png\common\系统升级.png" />
+    <Image Include="..\..\..\..\common\res\png\common\菜单背景.png" />
+    <Image Include="..\..\..\..\common\res\png\common\解锁.png" />
+    <Image Include="..\..\..\..\common\res\png\common\设置.png" />
+    <Image Include="..\..\..\..\common\res\png\common\财审.png" />
+    <Image Include="..\..\..\..\common\res\png\common\资料同步.png" />
+    <Image Include="..\..\..\..\common\res\png\common\软件小.png" />
+    <Image Include="..\..\..\..\common\res\png\common\进度条.png" />
+    <Image Include="..\..\..\..\common\res\png\common\退出.png" />
+    <Image Include="..\..\..\..\common\res\png\common\选中高亮2-21.png" />
+    <Image Include="..\..\..\..\common\res\png\common\通用框背景.png" />
+    <Image Include="..\..\..\..\common\res\png\common\部审.png" />
+    <Image Include="..\..\..\..\common\res\png\common\钱.png" />
+    <Image Include="..\..\..\..\common\res\png\common\锁定.png" />
+    <Image Include="..\..\..\..\common\res\png\common\锁定图标.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_close.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_max.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_min.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_restore.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\dlg_self.png" />
+    <Image Include="..\..\..\..\common\res\png\dialog\窗体框架.png" />
+    <Image Include="..\..\..\..\common\res\png\edit\输入框24.png" />
+    <Image Include="..\..\..\..\common\res\png\edit\输入框26.png" />
+    <Image Include="..\..\..\..\common\res\png\listctrl\表格背景.png" />
+    <Image Include="..\..\..\..\common\res\png\tab\多页面.png" />
+    <Image Include="..\..\..\..\common\res\png\tab\左导航Button.png" />
+    <Image Include="..\..\..\..\common\res\png\treectrl\竖型分组1.png" />
+    <Image Include="..\..\..\..\common\res\png\treectrl\竖型分组2.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\word.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\客人名单.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\帮助.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\旅行社.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\网络设置.png" />
+    <Image Include="..\..\..\..\common\res\png\TS\预览.png" />
+    <Image Include="..\..\..\..\common\res\png\登录背景.png" />
+    <Image Include="png\button\焦点框.png" />
+    <Image Include="res\EditButton.png" />
+    <Image Include="res\G03.gif" />
+    <Image Include="res\line.png" />
+    <Image Include="res\myoubox.ico" />
+    <Image Include="res\头部标签.PNG" />
+    <Image Include="res\头部背景.png" />
+    <Image Include="res\边框.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="\personalproject\common\res\interfacecommon.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
