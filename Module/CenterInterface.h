@@ -16,7 +16,6 @@
 ******************************************************************************/
 #pragma once
 #include "gclass.h"
-#include "WebSocket.h"
 #include "CommonStruct.h"
 
 #pragma pack(1)

@@ -67,6 +67,11 @@ public:
 	// 获取皮肤列表路径
 	string GetSkinPath();
 	wstring GetSkinPathW();
+	// 获取当前皮肤路径
+	std::wstring GetCurSkin(){ return m_strCurSkin; }
+	// 设置当前皮肤路径
+	void SetCurSkin(const wchar_t *strSkin);
+
 	// 增加皮肤
 	void AddSkin(const wchar_t *szSkin);
 	// 删除皮肤
@@ -75,14 +80,14 @@ public:
 	// 转换为绝对路径
 	static void SwitchAbsPath(string &strPath);
 public:
-	// 数据库主机名（Ip）
-	string GetDbIp(){ return m_strHostName; }
-	// 数据库用户名
-	string GetDbUserName(){ return m_strUserName; }
-	//数据库用户密码
-	string GetDbUserPass(){ return m_strPassword; }
-	// 数据库名
-	string GetDbName(){ return m_strDbName; }
+	//// 数据库主机名（Ip）
+	//string GetDbIp(){ return m_strHostName; }
+	//// 数据库用户名
+	//string GetDbUserName(){ return m_strUserName; }
+	////数据库用户密码
+	//string GetDbUserPass(){ return m_strPassword; }
+	//// 数据库名
+	//string GetDbName(){ return m_strDbName; }
 
 	// 网吧服务监听端口
 	int GetServerUdpPort(){ return atoi(m_strServerUdpPort.c_str()); }
@@ -101,8 +106,12 @@ public:
 	// 菜单版本
 	string GetMenuVer() { return m_strMenuVer; }
 
-	// 获取图片文件路径
+	// 获取大图资源文件路径
 	string GetImageFilePath(){ return m_strImagePath; }
+	wstring GetImageFilePathW(){ return MultCharToWideCharA(m_strImagePath.c_str(), m_strImagePath.size()); }
+	// 获取LOGO资源文件路径
+	string GetLogoFilePath(){ return m_strLogoPath; }
+	wstring GetLogoFilePathW(){ return MultCharToWideCharA(m_strLogoPath.c_str(), m_strLogoPath.size()); }
 	// 加载升级配置文件
 	void LoadUpdateConfig(const string &strUpdateFileName);
 
@@ -125,6 +134,8 @@ private:
 	string m_strServerUdpPort;
 	string m_strServerTcpPort;
 private:
+	// 当前皮肤路径
+	std::wstring m_strCurSkin;
 	// 皮肤路径列表
 	list<wstring> m_ltSkin;
 	// 上传URL
@@ -156,6 +167,8 @@ private:
 	string  m_strClientVer;
 	// 图片文件路径
 	string  m_strImagePath; 
+	// LOGO资源文件路径
+	string  m_strLogoPath; 
 	// 本地UDP监听端口
 	word m_nLocalUdpPort;
 	// 机器名

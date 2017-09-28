@@ -222,6 +222,12 @@
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.h">
       <Filter>LKComponent</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKAdWnd2.h">
+      <Filter>LKComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Module\WB2EventListener.h">
+      <Filter>Module</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="myoubox.cpp">
@@ -371,6 +377,12 @@
     <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKGifWnd.cpp">
       <Filter>LKComponent</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKAdWnd2.cpp">
+      <Filter>LKComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Module\WB2EventListener.cpp">
+      <Filter>Module</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="myoubox.rc">
@@ -382,6 +394,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\myoubox.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\jpg1.bin">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
@@ -696,6 +711,54 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\G03.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\dlg_bg.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\编辑框前景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\left_treebg.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\left_line.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\top_menu.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_friend.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_h_game.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_p_game.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_s_game.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_tool.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menu_video.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\dlg_close.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\dlg_min.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\dlg_self.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\blue_border.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\game_hoverbg.png">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

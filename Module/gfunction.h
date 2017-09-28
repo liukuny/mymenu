@@ -30,6 +30,7 @@ void EraseChar(string& s, char ch);
 void ParseStringBySpecChar(const string &strSource, string &strLeft, string &strRight, char ch = PROTOCOL_COMMON_SPLIT_CHAR);
 // 转换UTF8到本地编码
 string Utf8ToLocal(const string &strSource);
+wstring Utf8ToWideChar(const string &strSource);
 // 把char *转换成wstring
 wstring MultCharToWideCharA(const char *pStr, int nLen);
 // 把wchar_t *转换成string  

@@ -19,7 +19,7 @@ typedef struct GameItem
 	CString strGameIcon;
 	//排序值
 	CString strGameIndex;
-	//标志值
+	//标志值(是否闪烁)
 	CString strGameFlag;
 	// 动态图标标志值
 	CString strGameGifFlag;
@@ -90,6 +90,8 @@ class CLocalDataInfo : public CSafeSingle<CLocalDataInfo>
 public:
 	// 初始化游戏列表
 	void InitGameList();
+	// 获取游戏数据
+	PGameItem GetGameByName(CString &strGameName);
 	// 获取游戏数据列表
 	void GetGameList(list<PGameItem> &lt){ lt = m_ltGame; }
 	// 获取游戏类型数据列表

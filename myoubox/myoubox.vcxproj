@@ -19,7 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
@@ -110,6 +110,7 @@
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogEx.h" />
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.h" />
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\GDICommon.h" />
+    <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKAdWnd2.h" />
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBalloonWnd.h" />
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKBtnListBox.h" />
     <ClInclude Include="..\..\..\..\common\LKComponent\GDI\LKButton.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="..\Module\log.h" />
     <ClInclude Include="..\Module\netbase.h" />
     <ClInclude Include="..\Module\UdpServer.h" />
+    <ClInclude Include="..\Module\WB2EventListener.h" />
     <ClInclude Include="ChangeSkinDlg.h" />
     <ClInclude Include="LocalDataInfo.h" />
     <ClInclude Include="myoubox.h" />
@@ -175,6 +177,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\..\..\common\LKComponent\GDI\DynDialogItemEx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\common\LKComponent\GDI\LKAdWnd2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -342,6 +348,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\Module\WB2EventListener.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="ChangeSkinDlg.cpp" />
     <ClCompile Include="LocalDataInfo.cpp" />
     <ClCompile Include="myoubox.cpp" />
@@ -357,6 +367,7 @@
     <ResourceCompile Include="myoubox.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="res\jpg1.bin" />
     <None Include="res\myoubox.rc2" />
   </ItemGroup>
   <ItemGroup>
@@ -457,12 +468,28 @@
     <Image Include="..\..\..\..\common\res\png\TS\预览.png" />
     <Image Include="..\..\..\..\common\res\png\登录背景.png" />
     <Image Include="png\button\焦点框.png" />
+    <Image Include="res\blue_border.png" />
+    <Image Include="res\dlg_bg.jpg" />
+    <Image Include="res\dlg_close.png" />
+    <Image Include="res\dlg_min.png" />
+    <Image Include="res\dlg_self.png" />
     <Image Include="res\EditButton.png" />
     <Image Include="res\G03.gif" />
+    <Image Include="res\game_hoverbg.png" />
+    <Image Include="res\left_line.png" />
+    <Image Include="res\left_treebg.png" />
     <Image Include="res\line.png" />
+    <Image Include="res\menu_friend.png" />
+    <Image Include="res\menu_h_game.png" />
+    <Image Include="res\menu_p_game.png" />
+    <Image Include="res\menu_s_game.png" />
+    <Image Include="res\menu_tool.png" />
+    <Image Include="res\menu_video.png" />
     <Image Include="res\myoubox.ico" />
+    <Image Include="res\top_menu.png" />
     <Image Include="res\头部标签.PNG" />
     <Image Include="res\头部背景.png" />
+    <Image Include="res\编辑框前景.png" />
     <Image Include="res\边框.gif" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -697,6 +697,20 @@ string Utf8ToLocal(const string &strSource)
 	}
 	return strRet;
 }
+wstring Utf8ToWideChar(const string &strSource)
+{
+	wstring strRet;
+	int len = MultiByteToWideChar(CP_UTF8, 0, strSource.c_str(), -1, NULL, 0);
+	wchar_t* wstr = new wchar_t[len + 1];
+	if (wstr)
+	{
+		memset(wstr, 0, sizeof(wchar_t)* (len + 1));
+		MultiByteToWideChar(CP_UTF8, 0, strSource.c_str(), -1, wstr, len);
+		strRet = wstr;
+		delete[] wstr;
+	}
+	return strRet;
+}
 
 // °Ñchar *×ª»»³Éwstring
 std::wstring MultCharToWideCharA(const char *pStr, int nLen)

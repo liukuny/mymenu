@@ -330,6 +330,20 @@ void CLocalDataInfo::CombinGameIndexList()
 	m_ltGame.sort([](PGameItem p1, PGameItem p2) { return StrToInt(p1->strGameIndex) > StrToInt(p2->strGameIndex); });
 }
 
+// 获取游戏数据
+PGameItem CLocalDataInfo::GetGameByName(CString &strGameName)
+{
+	for (list<PGameItem>::iterator itG = m_ltGame.begin(); itG != m_ltGame.end(); itG++)
+	{
+		PGameItem p = *itG;
+		if (p->strGameName.Compare(strGameName) == 0)
+		{
+			return p;
+		}
+	}
+	return 0;
+}
+
 // 获取游戏类型第一级数据列表
 void CLocalDataInfo::GetGameTypeFirstLevelList(list<PGameTypeItem> &lt)
 { 

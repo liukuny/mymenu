@@ -24,6 +24,27 @@
 #define LKIMAGELISTINDEX_COMMON_SPLIT			LKPROJECT_INDEX_BEGIN + 9
 // 编辑框按钮图片
 #define LKIMAGEBUTTONINDEX_EDITBUTTON			LKPROJECT_INDEX_BEGIN + 10
+// 树形控件背景图片
+#define LKIMGMYOUBOX_TREE_BG					LKPROJECT_INDEX_BEGIN + 11
+// 树形控件分隔条图片
+#define LKIMGMYOUBOX_TREE_SPLIT					LKPROJECT_INDEX_BEGIN + 12
+// 顶部分类菜单条子项图片1 - 热门游戏
+#define LKIMAMYOUBOX_TOPHOTGAMEITEM				LKPROJECT_INDEX_BEGIN + 13
+// 顶部分类菜单条子项图片2 - 玩游戏
+#define LKIMAMYOUBOX_TOPPLAYGAMEITEM			LKPROJECT_INDEX_BEGIN + 14
+// 顶部分类菜单条子项图片3 - 影音娱乐
+#define LKIMAMYOUBOX_TOPMOVEITEM				LKPROJECT_INDEX_BEGIN + 15
+// 顶部分类菜单条子项图片4 - 聊天交友
+#define LKIMAMYOUBOX_TOPCHATITEM				LKPROJECT_INDEX_BEGIN + 16
+// 顶部分类菜单条子项图片5 - 小游戏
+#define LKIMAMYOUBOX_TOPSMALLGAMEITEM			LKPROJECT_INDEX_BEGIN + 17
+// 顶部分类菜单条子项图片6 - 常用工具
+#define LKIMAMYOUBOX_TOPTOOLSITEM				LKPROJECT_INDEX_BEGIN + 18
+/*顶部分类菜单高亮显示框*/\
+#define LKIMAMYOUBOX_TOPGAMEFOCUS				LKPROJECT_INDEX_BEGIN + 19
+/*下面分类菜单高亮显示框*/\
+#define LKIMAMYOUBOX_GAMEFOCUS					LKPROJECT_INDEX_BEGIN + 20
+
 // 索引0
 #define LKPROJECTHEADIMAGE_INDEX_0				LKPROJECTHEADIMAGE_INDEX_BEGIN + 0
 
@@ -51,9 +72,40 @@
 	/*头部标签*/\
 	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_HEADLABEL); \
 	/*头部分隔条*/\
-	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_HEADSPLIT, CRect(0, 0, 0, 0), 1, false); \
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_HEADSPLIT, CRect(0, 0, 0, 0), 1); \
 	/*编辑框按钮图片*/\
 	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_EDITBUTTON, CRect(0, 0, 0, 0), 3); \
+	/*树形控件背景图片*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TREEBG, CRect(0, 0, 0, 0), 1); \
+	/*树形控件分隔条图片*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TREESPLIT, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片1 - 热门游戏*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPHOTGAMEITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片2 - 玩游戏*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPPLAYGAMEITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片3 - 影音娱乐*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPMOVEITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片4 - 聊天交友*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPCHATITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片5 - 小游戏*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPSMALLGAMEITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单条子项图片6 - 常用工具*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPTOOLSITEM, CRect(0, 0, 0, 0), 1); \
+	/*顶部分类菜单高亮显示框*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_TOPGAMEFOCUS, CRect(0, 0, 0, 0), 1); \
+	/*下面分类菜单高亮显示框*/\
+	pImgMgr->SetPNGImage(i++, IDB_PNG_MYOUBOX_GAMEFOCUS, CRect(0, 0, 0, 0), 1); \
+	/*编辑框前景图片*/\
+	pImgMgr->SetPNGImage(LKIMAGELISTINDEX_EDIT_BEGIN + 1, IDB_PNG_MYOUBOX_EDITIMG, CRect(10, 4, 30, 4), 2); \
+	/*默认的TAB控件图片*/\
+	pImgMgr->SetPNGImage(LKIMAGELISTINDEX_TAB_BEGIN + 1, IDB_PNG_MYOUBOX_TABHEADER, CRect(6, 0, 6, 0), 3); \
+	/*默认的对话框框架图片*/\
+	pImgMgr->SetPNGImage(LKIMAGELISTINDEX_DIALOG_BEGIN, IDB_PNG_DLG_MYOUBOX_CLOSE); \
+	pImgMgr->SetPNGImage(LKIMAGELISTINDEX_DIALOG_BEGIN + 1, IDB_PNG_DLG_MYOUBOX_MIN); \
+	pImgMgr->SetPNGImage(LKIMAGELISTINDEX_DIALOG_BEGIN + 5, IDB_PNG_DLG_MYOUBOX_SELF); \
+	pImgMgr->SetJPGImage(LKIMAGELISTINDEX_DIALOG_BEGIN + 6, IDR_JPG_MAINBG); \
+	pImgMgr->SetImage(LKIMAGELISTINDEX_DIALOG_BEGIN + 7); \
+	pImgMgr->SetImage(LKIMAGELISTINDEX_DIALOG_BEGIN + 8); \
 }
 
 // 默认的头像 

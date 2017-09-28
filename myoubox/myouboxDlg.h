@@ -10,7 +10,9 @@
 #include "..\..\..\..\common\LKComponent\GDI\LKTreeCtrl.h"
 #include "..\..\..\..\common\LKComponent\GDI\LKTab.h"
 #include "..\..\..\..\common\LKComponent\GDI\LKContainer.h"
+#include "..\..\..\..\common\LKComponent\GDI\LKAdWnd2.h"
 
+#include "LocalDataInfo.h"
 
 
 // CmyouboxDlg 对话框
@@ -29,6 +31,10 @@ public:
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
+//#ifdef _DEBUG
+	// 测试用
+	void TestInitLGameList();
+//#endif
 
 // 实现
 protected:
@@ -45,6 +51,8 @@ protected:
 	afx_msg void OnEBnClickedButtonSearch(); 
 	DECLARE_MESSAGE_MAP()
 protected:
+	//// 初始化背景缓存
+	//virtual void InitBGBmp();
 	// 初始化图片列表
 	virtual void InitImageList();
 	// 初始化窗口前景图片
@@ -82,12 +90,21 @@ private:
 	//CLKButton	m_BtnSkin;
 	//// 关闭按钮
 	//CLKButton	m_BtnSkin;
+	// 顶部分类菜单
+	CLKTab m_tabTop;
 	// 热门游戏分类
 	CLKTreeCtrl m_treeMain;
 	// 顶部主分面标签
 	CLKTab			m_tabMain;
+	//// 游戏列表
+	//CLKContainer m_LContainer;
+	CRect			m_rtTopAd;
+	// 顶部广告
+	CLKAdDialog		m_TopAd;
 	// 游戏列表
-	CLKContainer m_Container;
+	CLKContainer	m_Container;
+	// 皮肤图片
+	CLKImage		*m_pSkinImg = 0;
 
 private:
 	// 调整子控件的位置
@@ -102,6 +119,8 @@ private:
 	void OnTabCtrlSelectedChanged();
 	// 更新其它窗口
 	void UpdateAllDlgBGImg();
+	// 处理运行游戏请求
+	void OnProcRunGameReq(PGameItem p);
 	void OnOpenMainPanel();
 	void OnEBnClickedButtonSearchI();
 	bool GetProcessidFromName(CString &strName);

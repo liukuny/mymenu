@@ -9,10 +9,13 @@
 
 // 服务器端配置文件名
 #define CONFIG_FILENAME					"config.ini"
+#define CONFIG_FILENAMEW				L"config.ini"
 // 本地配置
 #define CONFIG_LOCALAPP					"local"
+#define CONFIG_LOCALAPPW				L"local"
 // 本地配置
 #define CONFIG_SKIN						"skin"
+#define CONFIG_SKINW					L"skin"
 // 取出控制端版本
 #define CONFIG_LOCAL_CONTROLVER			"1.0.0.1"
 // 取出客户端版本
@@ -23,6 +26,8 @@
 #define CONFIG_LOCAL_UDPLISTENKEY		"udpport"
 // 图片文件路径
 #define CONFIG_LOCAL_IMAGEPATH		    "imagepath"
+// LOGO资源文件名
+#define CONFIG_LOCAL_LOGOPATHNAME	    "logopathname"
 // 本地UDP监听端口
 #define CONFIG_LOCAL_LOCALUDPLISTENPORT "udplistenport"
 // 机器编号
@@ -52,6 +57,10 @@
 #define CONFIG_SKIN_COUNT			"count"
 // 皮肤路径
 #define CONFIG_SKIN_PATH			"path"
+// 当前皮肤路径
+#define CONFIG_SKIN_CURSKINPATH		"curskin"
+#define CONFIG_SKIN_CURSKINPATHW	L"curskin"
+
 
 // 服务端版本
 const char *g_constServerVer = "1.0.0.0";
@@ -121,6 +130,17 @@ wstring CConfigFile::GetSkinPathW()
 	return MultCharToWideCharA(strPath.c_str(), strPath.size());
 }
 
+// 设置当前皮肤路径
+void CConfigFile::SetCurSkin(const wchar_t *strSkin)
+{ 
+	wstring strFileName = CreateFullPathNameW(CONFIG_FILENAMEW);
+	m_strCurSkin = strSkin;
+	wstring strKey = CONFIG_SKIN_CURSKINPATHW;
+	wstring strValueW = strSkin;
+	//string strVAlue = WideCharToMultiCharW(strValueW.c_str(), strValueW.size());
+	::WritePrivateProfileString(CONFIG_SKINW, strKey.c_str(), strValueW.c_str(), strFileName.c_str());
+}
+
 // 增加皮肤
 void CConfigFile::AddSkin(const wchar_t *szSkin)
 {
@@ -161,7 +181,9 @@ void CConfigFile::SaveSkin()
 void CConfigFile::LoadConfig()
 {
 	char szTemp[MAX_PATH] = { 0 };
+	wchar_t szTempW[MAX_PATH] = { 0 };
 	string strFileName = CreateFullPathName(CONFIG_FILENAME);
+	wstring strFileNameW = CreateFullPathNameW(CONFIG_FILENAMEW);
 	// 获取机器名
 	GetPrivateProfileStringA(CONFIG_LOCALAPP, CONFIG_LOCAL_MACHINENAME, "", szTemp, MAX_PATH - 1, strFileName.c_str());
 	m_strMachineName = szTemp;
@@ -202,14 +224,28 @@ void CConfigFile::LoadConfig()
 	// 取出udp服务监听端口
 	GetPrivateProfileStringA(CONFIG_LOCALAPP, CONFIG_LOCAL_UDPLISTENKEY, "7070", szTemp, MAX_PATH - 1, strFileName.c_str());
 	m_strServerUdpPort = szTemp;
-	// 图片文件路径
+	// 获取当前皮肤路径
+	GetPrivateProfileString(CONFIG_SKINW, CONFIG_SKIN_CURSKINPATHW, L"", szTempW, MAX_PATH - 1, strFileNameW.c_str());
+	m_strCurSkin = szTempW;
+	// 大图资源文件路径
 	GetPrivateProfileStringA(CONFIG_LOCALAPP, CONFIG_LOCAL_IMAGEPATH, "", szTemp, MAX_PATH - 1, strFileName.c_str());
 	m_strImagePath = szTemp;
 
 	if (m_strImagePath.empty())
 	{
-		m_strImagePath = "\\image";
+		m_strImagePath = "\\images";
 		m_strImagePath = CreateFullPathName(m_strImagePath);
+	}
+
+	// LOGO资源文件名
+	GetPrivateProfileStringA(CONFIG_LOCALAPP, CONFIG_LOCAL_LOGOPATHNAME, "", szTemp, MAX_PATH - 1, strFileName.c_str());
+	m_strLogoPath = szTemp;
+
+	if (m_strLogoPath.empty())
+	{
+		m_strLogoPath = "\\logo";
+		m_strLogoPath = CreateFullPathName(m_strLogoPath);
+		m_strLogoPath += "\\logo.png";
 	}
 	// 取硬盘编号
 	GetSysDiskNum();

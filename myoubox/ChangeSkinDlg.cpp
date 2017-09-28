@@ -2,14 +2,13 @@
 //
 
 #include "stdafx.h"
-//#include "Trip.h"
-#include "ChangeSkinDlg.h"
-//#include "MiscMgr.h"
-#include "ConfigFile.h"
-//#include "UserConfigFile.h"
+#include "..\..\..\..\common\LKComponent\GDI\LKImageMgr.h"
 #include "..\..\..\..\common\LKComponent\GDI\LKMessageBox.h"
 #include "..\..\..\..\common\res\resource1.h"
-//#include "..\..\..\common\res\resource1.h"
+#include "log.h"
+#include "myoubox.h"
+#include "ChangeSkinDlg.h"
+#include "ConfigFile.h"
 // 各控件标识
 // 皮肤列表控件
 #define CHANGESKINDLG_CTRLID_SKINLISTID		100
@@ -26,6 +25,12 @@
 // 加载皮肤完成
 #define WPARAM_LOAD_SKIN_FINISH			3
 
+// 按钮图片宽度
+#define CHANGESKINDLG_BTN_WIDTH			120
+// 按钮图片高度
+#define CHANGESKINDLG_BTN_HIGH			100
+// 对话框标题栏高度
+#define CHANGESKINDLG_TITLE_HIGH		6
 // CChangeSkinDlg 对话框
 
 IMPLEMENT_DYNAMIC(CChangeSkinDlg, CLKMaskDialog)
@@ -37,6 +42,11 @@ CChangeSkinDlg::CChangeSkinDlg(CWnd* pParent /*=NULL*/)
 , m_btnReset(2)
 {
 	InitImageList();
+	CRect rt(0, 30, 0, 0);
+	SetNCClientRect(rt);
+	//SetFillet(false);
+	//SetDrawMidImg(false); 
+	//SetIsDrawDlgFram(false);
 }
 
 CChangeSkinDlg::~CChangeSkinDlg()
@@ -51,15 +61,19 @@ void CChangeSkinDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 // 初始化图片列表
-//void CChangeSkinDlg::InitImageList()
-//{
-//	// 初始化图片列表
-//	CLKDialog::InitImageList();
-//	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_MAX] = 0;
-//	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_MIN] = 0;
-//	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_RESTORE] = 0;
-//	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_SELF] = 0;
-//}
+void CChangeSkinDlg::InitImageList()
+{
+	// 初始化图片列表
+	CLKDialog::InitImageList();
+	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_MAX] = 0;
+	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_MIN] = 0;
+	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_RESTORE] = 0;
+	m_arrImage[LKGDIBASEDIALOG_IMAGEINDEX_SELF] = 0;
+	// 顶部蒙板
+	m_pTopImage = CLKImageMgr::GetImageS(LKIMAGELISTINDEX_COMMON_TOPMASK6);
+	// 底部蒙板
+	m_pBottomImage = CLKImageMgr::GetImageS(LKIMAGELISTINDEX_COMMON_BOTTOMMASK27);
+}
 
 
 BEGIN_MESSAGE_MAP(CChangeSkinDlg, CLKMaskDialog)
@@ -98,7 +112,7 @@ void CChangeSkinDlg::OnBtnAddSkin()
 			CLKImage img;
 			if (img.Load(item.strPath) != E_FAIL)
 			{
-				item.pImg = new CLKImage(77, 50);
+				item.pImg = new CLKImage(CHANGESKINDLG_BTN_WIDTH, CHANGESKINDLG_BTN_HIGH);
 				img.StretchToImage(item.pImg);
 				::SendMessage(GetSafeHwnd(), LKSELFOTHER_MSG, WPARAM_LOAD_SINGLE_SKIN, (LPARAM)&item);
 				img.Destroy();
@@ -129,14 +143,20 @@ void CChangeSkinDlg::OnBtnResetSkin()
 		//}
 		// 清空选中状态
 		m_ltSkin.ClearSelectItem();
+	}
 
-		// 父窗体换皮肤
+	CString strSkin = CConfigFile::GetInstance()->GetCurSkin().c_str();
+	if (!strSkin.IsEmpty())
+	{
+		// 父窗体换皮肤 
 		CLKImage img;
 		CRect rtFrame;
-		if(false != img.LoadEx(IDB_JPG_DLG_BG, false, rtFrame, _T("JPG")))
+		//if (false != img.LoadEx(IDB_JPG_DLG_BG, false, rtFrame, _T("JPG")))
+		if (false != img.LoadEx(IDR_JPG_MAINBG, false, rtFrame, _T("JPG")))
 		{
 			::AfxGetMainWnd()->SendMessage(LKCOMMON_MSG, LKBUTTONEX_MSG_WPARAM_SELECTED, (LPARAM)&img);
 			SendMessage(LKCOMMON_MSG, LKCOMMON_MSG_WPARAM_RESETMEM, 0);
+			CConfigFile::GetInstance()->SetCurSkin(L"");
 		}
 	}
 }
@@ -146,7 +166,7 @@ BOOL CChangeSkinDlg::OnInitDialog()
 {
 	CLKMaskDialog::OnInitDialog();
 
-	SetWindowPos(0, 0, 0, 361, 242, SWP_NOMOVE | SWP_NOZORDER);
+	SetWindowPos(0, 0, 0, 670, 500, SWP_NOMOVE | SWP_NOZORDER);
 	CString strCaption(_T("更换皮肤"));
 	SetWindowText(strCaption);
 	// TODO:  在此添加额外的初始化
@@ -155,8 +175,12 @@ BOOL CChangeSkinDlg::OnInitDialog()
 	GetClientRect(&rtClient);
 	// 皮肤列表
 	CRect rtSkin(rtClient);
-	rtSkin.top += 6;
+	rtSkin.top += CHANGESKINDLG_TITLE_HIGH;
 	rtSkin.bottom -= 27;
+	rtSkin.left += 10;
+	rtSkin.right -= 10;
+	m_ltSkin.SetItemWidth(CHANGESKINDLG_BTN_WIDTH + 8);
+	m_ltSkin.SetItemHeight(CHANGESKINDLG_BTN_HIGH + 8);
 	m_ltSkin.Create(rtSkin, this, CHANGESKINDLG_CTRLID_SKINLISTID);
 
 	// 加载皮肤按钮
@@ -206,6 +230,7 @@ LRESULT CChangeSkinDlg::OnCommonMsg(WPARAM wParam, LPARAM lParam)
 	            //// 记下当前皮肤
 	            //CUserConfigFile *pConfig = CUserConfigFile::GetInstance();
 	            //pConfig->ModifyCurSkin(*pFileName);
+				CConfigFile::GetInstance()->SetCurSkin(strFileName.GetBuffer());
 			}
 		}
 	}else if(LKBUTTONEX_MSG_WPARAM_DELETE == wParam)
@@ -248,7 +273,7 @@ UINT CChangeSkinDlg::LoadSkinBtnThread(LPVOID pParam)
 		CString sTemp(it.c_str());
 		if(img.Load(sTemp) != E_FAIL)
 		{
-			item.pImg = new CLKImage(77, 50);
+			item.pImg = new CLKImage(CHANGESKINDLG_BTN_WIDTH, CHANGESKINDLG_BTN_HIGH);
 			img.StretchToImage(item.pImg);
 			::SendMessage(pThis->GetSafeHwnd(), LKSELFOTHER_MSG, WPARAM_LOAD_SINGLE_SKIN, (LPARAM)&item);
 			img.Destroy();

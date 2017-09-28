@@ -31,6 +31,8 @@ protected:
 	void OnBtnAddSkin();
 	// 重置皮肤图片按钮点击事件
 	void OnBtnResetSkin();
+	// 初始化图片列表
+	virtual void InitImageList();
 
 	DECLARE_MESSAGE_MAP()
 private:
